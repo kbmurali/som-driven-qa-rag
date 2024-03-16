@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # coding: utf-8
 '''
 ------------------------------------------------------------------------------
@@ -17,16 +16,11 @@
    limitations under the License.
 ------------------------------------------------------------------------------
 '''
-# In[1]:
 
 
 from abc import ABC, abstractmethod
 import torch
 import math
-
-
-# In[2]:
-
 
 class QuestionAnswerChatBot( ABC ):
     def __init__( 
@@ -174,10 +168,3 @@ class QuestionAnswerChatBot( ABC ):
     Question: {}
     Answer:"""
         return qa_template
-
-
-# In[ ]:
-
-
-
-

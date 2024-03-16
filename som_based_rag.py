@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # coding: utf-8
 '''
 ------------------------------------------------------------------------------
@@ -17,8 +16,6 @@
    limitations under the License.
 ------------------------------------------------------------------------------
 '''
-# In[3]:
-
 
 import warnings
 
@@ -33,9 +30,6 @@ import torch.nn as nn
 from vector_encoder_parent import VectorEncoder
 
 from vector_indexer import SOMBasedVectorIndexer
-
-
-# In[4]:
 
 
 class SOM_Based_RAG_Util():
@@ -203,4 +197,3 @@ class SOM_Based_RAG_Util():
         self.vector_indexer.train_n_gen_indexes( self.vectors, train_epochs )
         
         self.data_vectors_indexed = True
-

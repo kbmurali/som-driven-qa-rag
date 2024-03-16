@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # coding: utf-8
 '''
 ------------------------------------------------------------------------------
@@ -17,16 +16,11 @@
    limitations under the License.
 ------------------------------------------------------------------------------
 '''
-# In[1]:
-
 
 import requests
 import pandas as pd
 from dateutil.parser import parse
 from typing import List
-
-
-# In[2]:
 
 
 class WikiEventsDataSource():
@@ -40,8 +34,6 @@ class WikiEventsDataSource():
         self.event_years_to_fetch = [ int(year) for year in event_years_to_fetch ]
         
         self.event_years_to_fetch = [ str(year) for year in self.event_years_to_fetch ]
-        
-        #self.event_years_to_fetch = "|".join( self.event_years_to_fetch )
         
         self.fetched = False
         
@@ -139,20 +131,3 @@ class WikiEventsDataSource():
             row["text"] = "".join( [ dt_str, ", ", year, " – ", remainder_str ])
                     
         return df
-
-
-# In[3]:
-
-
-wiki_source = WikiEventsDataSource( [ '2023', '2024' ] )
-
-wiki_source.fetch_n_prepare_data()
-
-wiki_source.df[ "text" ][61]
-
-
-# In[ ]:
-
-
-
-

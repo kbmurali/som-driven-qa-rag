@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # coding: utf-8
 '''
 ------------------------------------------------------------------------------
@@ -17,18 +16,12 @@
    limitations under the License.
 ------------------------------------------------------------------------------
 '''
-# In[1]:
-
 
 from abc import ABC, abstractmethod
 
 import torch
 
 from typing import List
-
-
-# In[2]:
-
 
 class VectorEncoder( ABC ):
     def __init__( self, encoded_vector_dimensions : int ):
@@ -44,10 +37,3 @@ class VectorEncoder( ABC ):
     @abstractmethod
     def encode_batch( self, list_of_text : List[ str ] ) -> torch.Tensor :
         pass
-
-
-# In[ ]:
-
-
-
-

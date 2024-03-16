@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # coding: utf-8
 '''
 ------------------------------------------------------------------------------
@@ -17,7 +16,6 @@
    limitations under the License.
 ------------------------------------------------------------------------------
 '''
-# In[1]:
 
 
 import warnings
@@ -31,9 +29,6 @@ import torch
 from kohonen_som import KohonenSOM
 
 from typing import List
-
-
-# In[ ]:
 
 
 class SOMBasedVectorIndexer():
@@ -113,10 +108,3 @@ class SOMBasedVectorIndexer():
             nearest_indexes.append( nearest_idx )
         
         return nearest_indexes
-
-
-# In[ ]:
-
-
-
-
